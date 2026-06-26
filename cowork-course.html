@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Claude Cowork Course · AI Training for Creative &amp; Content Businesses · Cohort 2, Sept 2026 | Jason Mitchell</title>
+<meta name="description" content="A four-week, hands-on online course to set up Claude Cowork from scratch and customise it around how you work. AI training built for content and creative businesses across TV, video production, social video and animation. Cohort 2 starts September 2026." />
+<meta name="keywords" content="Claude Cowork, Claude Cowork course, Claude Cowork training, AI for creative businesses, AI for video production, AI training for content creators, AI for production companies, AI for animation studios, AI workflow automation, Jason Mitchell" />
+<meta name="author" content="Jason Mitchell" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://jasonmitchell.co.uk/cowork-course" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Claude Cowork Course · AI Training for Creative &amp; Content Businesses" />
+<meta property="og:description" content="A four-week, hands-on online course to set up Claude Cowork for your creative or video business. Cohort 2, September 2026." />
+<meta property="og:url" content="https://jasonmitchell.co.uk/cowork-course" />
+<meta property="og:image" content="https://jasonmitchell.co.uk/img/hero-jason.jpg" />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Claude Cowork Course · AI Training for Creative &amp; Content Businesses" />
+<meta name="twitter:description" content="Four-week, hands-on online course to set up Claude Cowork for your creative or video business. Cohort 2, Sept 2026." />
+<meta name="twitter:image" content="https://jasonmitchell.co.uk/img/hero-jason.jpg" />
+<meta name="theme-color" content="#4a1d8e" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<style>
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes pop { from { opacity: 0; transform: translateY(12px) scale(0.98); } to { opacity: 1; transform: none; } }
+
+  :root {
+    --cyan: #5dcadb;
+    --purple: #7333df;
+    --coral: #ff3c4b;
+    --yellow: #ffe14d;
+    --white: #ffffff;
+    --glass: rgba(255,255,255,0.07);
+    --glass-border: rgba(255,255,255,0.12);
+    --glass-hover: rgba(255,255,255,0.13);
+    --dark-overlay: rgba(0,0,0,0.25);
+    --text: #ffffff;
+    --text-soft: rgba(255,255,255,0.7);
+    --text-muted: rgba(255,255,255,0.5);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background:
+      radial-gradient(ellipse at 15% 10%, rgba(93,202,219,0.85) 0%, transparent 45%),
+      radial-gradient(ellipse at 80% 15%, rgba(255,60,75,0.65) 0%, transparent 40%),
+      radial-gradient(ellipse at 45% 75%, rgba(115,51,223,0.9) 0%, transparent 55%),
+      radial-gradient(ellipse at 90% 85%, rgba(93,202,219,0.4) 0%, transparent 35%),
+      #4a1d8e;
+    background-attachment: fixed;
+    color: var(--text);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Ticker */
+  .ticker { background: rgba(0,0,0,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 11px 0; font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; overflow: hidden; position: sticky; top: 0; z-index: 120; border-bottom: 1px solid var(--glass-border); }
+  .ticker-track { display: inline-flex; animation: slide 38s linear infinite; }
+  .ticker-track .msg { margin-right: 64px; font-weight: 700; color: var(--text-muted); display: inline-flex; align-items: center; gap: 10px; }
+  .ticker-track .hl { background: var(--yellow); color: #1a1300; padding: 3px 9px; border-radius: 5px; font-weight: 900; }
+  .ticker-track .hl-text { color: var(--yellow); font-weight: 900; }
+
+  /* Top bar */
+  .topbar { padding: 16px 40px; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid var(--glass-border); flex-wrap: wrap; }
+  .brand { font-weight: 900; letter-spacing: -0.02em; font-size: 17px; }
+  .brand small { display: block; font-weight: 600; color: var(--text-muted); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; }
+
+  /* Buttons */
+  .cta { display: inline-flex; align-items: center; gap: 10px; padding: 15px 26px; background: var(--white); color: var(--purple); font-weight: 700; font-size: 14px; border-radius: 10px; transition: transform 0.2s, box-shadow 0.2s, background 0.2s, filter 0.2s; cursor: pointer; border: none; font-family: inherit; }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 12px 24px rgba(0,0,0,0.3); }
+  .cta.outline { background: transparent; color: var(--white); border: 1px solid var(--glass-border); }
+  .cta.outline:hover { background: var(--glass-hover); }
+  .cta.bright { background: var(--coral); color: var(--white); font-weight: 800; box-shadow: 0 8px 20px rgba(255,60,75,0.35); }
+  .cta.bright:hover { filter: brightness(1.07); box-shadow: 0 14px 30px rgba(255,60,75,0.45); }
+  .cta.cyan { background: var(--cyan); color: #08313a; font-weight: 800; }
+  .cta.cyan:hover { filter: brightness(1.05); }
+  .cta.ghost { background: rgba(255,255,255,0.08); color: var(--white); border: 1px solid var(--glass-border); font-weight: 700; }
+  .cta.ghost:hover { background: var(--glass-hover); }
+  .cta.sm { padding: 11px 18px; font-size: 13px; }
+  .link-btn { background: none; border: none; font: inherit; cursor: pointer; color: var(--cyan); font-weight: 700; font-size: 13px; padding: 4px 0; }
+  .link-btn:hover { opacity: 0.75; }
+
+  /* Hero */
+  .hero { padding: 64px 40px 70px; border-bottom: 1px solid var(--glass-border); }
+  .hero-inner { max-width: 980px; margin: 0 auto; text-align: center; }
+  .eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; margin-bottom: 22px; padding: 7px 16px; background: var(--cyan); color: #08313a; border-radius: 7px; }
+  .hero-kicker { font-size: clamp(13px, 1.5vw, 16px); font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--white); margin-bottom: 14px; }
+  /* Trainer photo */
+  .trainer-card { display: flex; gap: 28px; align-items: center; max-width: 820px; margin: 0 auto; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 18px; padding: 30px 32px; text-align: left; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .trainer-photo { flex: 0 0 200px; }
+  .trainer-photo img { width: 200px; height: 240px; object-fit: cover; border: 2px solid var(--glass-border); border-radius: 14px; box-shadow: 0 18px 40px rgba(0,0,0,0.4); }
+  .trainer-body { flex: 1; }
+  @media (max-width: 760px) { .trainer-card { flex-direction: column; text-align: center; } .trainer-photo img { width: 180px; height: 210px; } }
+  .hero h1 { font-size: clamp(40px, 6.4vw, 84px); font-weight: 900; line-height: 0.95; letter-spacing: -0.04em; margin-bottom: 18px; }
+  .date-chip { display: inline-block; font-size: 13px; font-weight: 700; letter-spacing: 0.05em; color: var(--text-soft); border: 1px solid var(--glass-border); background: var(--glass); border-radius: 999px; padding: 7px 16px; margin-bottom: 22px; }
+  .hero p.lead { font-size: clamp(17px, 1.9vw, 21px); color: var(--text-soft); line-height: 1.6; max-width: 760px; margin: 0 auto 28px; }
+  .hero p.lead strong { color: var(--white); font-weight: 700; }
+  .price-box { display: inline-flex; flex-direction: column; align-items: center; gap: 4px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 16px; padding: 18px 30px; margin-bottom: 28px; }
+  .price-box .amt { font-size: 30px; font-weight: 900; letter-spacing: -0.02em; }
+  .price-box .amt span { font-size: 15px; font-weight: 600; color: var(--text-soft); }
+  .price-box .inc { font-size: 13px; color: var(--text-muted); }
+  .price-box .intl { font-size: 13px; color: var(--text-soft); margin-top: 8px; }
+  .price-box .intl[hidden] { display: none; }
+  .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  /* Sections */
+  section { padding: 80px 40px; border-bottom: 1px solid var(--glass-border); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .center { text-align: center; }
+  .section-label { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px; padding: 6px 14px; background: rgba(255,255,255,0.1); border: 1px solid var(--glass-border); border-radius: 6px; color: var(--text-soft); }
+  .section-title { font-size: clamp(30px, 4.2vw, 54px); font-weight: 900; line-height: 1.0; letter-spacing: -0.03em; margin-bottom: 16px; }
+  .section-intro { font-size: 17px; color: var(--text-soft); max-width: 720px; line-height: 1.55; margin: 0 auto 44px; }
+  .dark { background: var(--dark-overlay); }
+
+  /* Week tiles */
+  .weeks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .week { padding: 28px 24px; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 18px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); transition: transform 0.3s, background 0.3s; }
+  .week:hover { transform: translateY(-4px); background: var(--glass-hover); }
+  .week .wn { font-size: 12px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--cyan); margin-bottom: 12px; }
+  .week h3 { font-size: 20px; font-weight: 900; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 8px; }
+  .week p { font-size: 14px; color: var(--text-soft); line-height: 1.5; }
+
+  /* Outcomes */
+  .tick { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 920px; margin: 0 auto; text-align: left; }
+  .tick li { position: relative; padding-left: 34px; font-size: 16px; color: var(--text-soft); line-height: 1.5; }
+  .tick li strong { color: var(--white); font-weight: 700; }
+  .tick li::before { content: "✓"; position: absolute; left: 0; top: 0; width: 22px; height: 22px; border-radius: 7px; background: rgba(93,202,219,0.18); color: var(--cyan); font-weight: 800; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+
+  /* Included steps */
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+  .step { padding: 26px 24px; background: var(--glass); border: 1px solid var(--glass-border); border-left: 3px solid var(--cyan); border-radius: 0 14px 14px 0; }
+  .step b { display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cyan); margin-bottom: 8px; }
+  .step p { font-size: 15px; color: var(--text-soft); line-height: 1.5; }
+
+  /* Cohort selector */
+  .dates-banner { text-align: center; font-size: clamp(15px, 2vw, 19px); font-weight: 900; letter-spacing: 0.06em; text-transform: uppercase; color: #08313a; background: var(--yellow); border-radius: 10px; padding: 14px 20px; max-width: 760px; margin: 0 auto 24px; }
+  .select-box { max-width: 760px; margin: 0 auto; background: var(--glass); border: 1px solid var(--glass-border); border-radius: 20px; padding: 30px 30px 28px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+  .select-box .sb-intro { font-size: 15px; color: var(--text-soft); line-height: 1.55; margin-bottom: 20px; text-align: center; }
+  .slot { display: flex; align-items: flex-start; gap: 14px; padding: 16px 18px; background: rgba(255,255,255,0.05); border: 1px solid var(--glass-border); border-radius: 12px; margin-bottom: 12px; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+  .slot:hover { background: var(--glass-hover); }
+  .slot.checked { border-color: var(--cyan); background: rgba(93,202,219,0.1); }
+  .slot input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--cyan); flex-shrink: 0; cursor: pointer; }
+  .slot .slot-body .day { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
+  .slot .slot-body .day span { color: var(--cyan); }
+  .slot .slot-body .dts { font-size: 13.5px; color: var(--text-soft); margin-top: 2px; }
+  .slot .slot-body .tz { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .price-line { text-align: center; margin: 22px 0 18px; }
+  .price-line .pl-amt { font-size: 24px; font-weight: 900; letter-spacing: -0.02em; }
+  .price-line .pl-amt span { font-size: 14px; font-weight: 600; color: var(--text-soft); }
+  .price-line .pl-sub { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+  .select-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .select-actions .cta { flex: 1 1 200px; justify-content: center; }
+  .sb-fine { font-size: 12.5px; color: var(--text-muted); text-align: center; margin-top: 16px; line-height: 1.5; }
+  .sb-fine button { color: var(--cyan); }
+  .cohort-note { max-width: 760px; margin: 22px auto 0; font-size: 13.5px; color: var(--text-soft); text-align: center; background: rgba(0,0,0,0.2); border: 1px solid var(--glass-border); border-radius: 12px; padding: 14px 18px; line-height: 1.55; }
+  .cohort-note a { color: var(--cyan); font-weight: 700; }
+
+  /* Timezone toggle */
+  .tz-toggle { display: flex; align-items: center; justify-content: center; gap: 10px; flex-wrap: wrap; max-width: 760px; margin: 0 auto 22px; font-size: 14px; color: var(--text-soft); }
+  .tz-toggle .tz-label { font-weight: 600; }
+  .tz-toggle select { font: inherit; font-size: 14px; font-weight: 700; color: var(--white); background: var(--glass); border: 1px solid var(--glass-border); border-radius: 10px; padding: 9px 14px; cursor: pointer; }
+  .tz-toggle select:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+  .slot .slot-body .slot-time { color: var(--cyan); font-weight: 800; }
+
+  /* Enrol / invoice button + reveal */
+  .cta-enrol { flex-direction: column; gap: 4px; padding: 16px 26px; line-height: 1.25; text-align: center; }
+  .cta-enrol small { font-weight: 600; font-size: 12px; opacity: 0.92; }
+  .enrol-form { margin-top: 14px; }
+  .enrol-form[hidden] { display: none; }
+  .enrol-label { display: block; font-size: 13px; font-weight: 700; color: var(--text-soft); margin-bottom: 8px; text-align: left; }
+  .enrol-row { display: flex; gap: 10px; flex-wrap: wrap; }
+  .enrol-row input { flex: 1 1 240px; padding: 14px 16px; border-radius: 10px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.08); color: var(--white); font: inherit; font-size: 15px; }
+  .enrol-row input::placeholder { color: var(--text-muted); }
+  .enrol-hint { font-size: 12.5px; color: var(--text-muted); margin-top: 10px; text-align: left; line-height: 1.5; }
+  .select-secondary { display: flex; flex-direction: column; align-items: center; gap: 10px; margin-top: 18px; }
+  .select-secondary .cta { min-width: 240px; justify-content: center; }
+
+  /* Testimonials placeholder */
+  .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; max-width: 880px; margin: 0 auto; }
+  .quote { padding: 24px 22px; background: var(--glass); border: 1px dashed var(--glass-border); border-radius: 14px; }
+  .quote p { font-size: 16px; font-style: italic; color: var(--text-soft); }
+  .quote span { display: block; margin-top: 10px; font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+  /* FAQ */
+  .faq-list { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--glass-border); }
+  .faq-item { border-bottom: 1px solid var(--glass-border); }
+  .faq-q { width: 100%; padding: 22px 0; background: none; border: none; font: inherit; color: inherit; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 24px; font-size: clamp(16px, 1.7vw, 19px); font-weight: 700; letter-spacing: -0.01em; }
+  .faq-toggle { width: 32px; height: 32px; background: rgba(255,255,255,0.1); border: 1px solid var(--glass-border); color: var(--white); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0; transition: transform 0.3s, background 0.3s; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); background: rgba(255,255,255,0.2); }
+  .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.3s ease; font-size: 15.5px; line-height: 1.6; color: var(--text-soft); }
+  .faq-item.open .faq-a { max-height: 600px; padding: 0 0 26px; }
+  .faq-a button { color: var(--cyan); }
+
+  /* Footer */
+  footer { background: rgba(0,0,0,0.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); padding: 36px 40px; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--glass-border); }
+  .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 18px; max-width: 1100px; margin: 0 auto; flex-wrap: wrap; }
+  footer a, footer button { color: var(--text-soft); }
+  footer a:hover, footer button:hover { color: var(--white); }
+  .footer-links button, .footer-links a { margin-left: 16px; background: none; border: none; font: inherit; cursor: pointer; }
+
+  /* Modal */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(8,4,24,0.72); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); display: none; align-items: flex-start; justify-content: center; padding: 6vh 20px; z-index: 400; overflow-y: auto; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: #2a1660; background-image: radial-gradient(ellipse at 20% 0%, rgba(93,202,219,0.25) 0%, transparent 50%), radial-gradient(ellipse at 90% 10%, rgba(255,60,75,0.2) 0%, transparent 45%); border: 1px solid var(--glass-border); border-radius: 18px; max-width: 820px; width: 100%; padding: 40px 38px; position: relative; animation: pop 0.3s ease; box-shadow: 0 30px 80px rgba(0,0,0,0.5); }
+  .modal h3 { font-size: clamp(24px, 3vw, 34px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 6px; padding-right: 50px; }
+  .modal .modal-sub { font-size: 15px; color: var(--text-soft); margin-bottom: 24px; }
+  .modal-close { position: absolute; top: 22px; right: 22px; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,255,255,0.12); border: 1px solid var(--glass-border); color: var(--white); font-size: 22px; cursor: pointer; line-height: 1; display: flex; align-items: center; justify-content: center; }
+  .modal-close:hover { background: rgba(255,255,255,0.24); }
+  .terms h4 { font-size: 16px; font-weight: 800; margin: 22px 0 7px; color: var(--white); }
+  .terms h4:first-of-type { margin-top: 6px; }
+  .terms p, .terms li { font-size: 14.5px; color: var(--text-soft); line-height: 1.6; }
+  .terms ul { margin: 6px 0 0 18px; }
+  .terms li { margin-bottom: 5px; }
+  .terms .terms-foot { margin-top: 24px; font-size: 13px; color: var(--text-muted); border-top: 1px solid var(--glass-border); padding-top: 16px; }
+
+  @media (max-width: 1000px) {
+    .weeks { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 760px) {
+    .topbar { padding: 14px 20px; }
+    .hero { padding: 40px 20px 52px; }
+    section { padding: 54px 20px; }
+    .weeks, .tick, .quotes { grid-template-columns: 1fr; }
+    .modal { padding: 30px 22px; }
+    .footer-row { flex-direction: column; text-align: center; }
+    .footer-links a, .footer-links button { margin: 0 8px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } .modal { animation: none; } * { scroll-behavior: auto; } }
+</style>
+<!-- Structured data: Course -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Course",
+  "name": "Claude Cowork Course",
+  "description": "A four-week, hands-on online course to set up Claude Cowork from scratch and customise it around how you work. AI training built for content and creative businesses across TV, video production, social video and animation.",
+  "url": "https://jasonmitchell.co.uk/cowork-course",
+  "provider": { "@type": "Organization", "name": "The Connected Set", "url": "https://theconnectedset.com" },
+  "educationalLevel": "Beginner to intermediate",
+  "teaches": ["Claude Cowork setup", "AI workflow automation", "Building custom AI skills", "AI connectors and plugins", "Scheduled AI tasks"],
+  "audience": { "@type": "Audience", "audienceType": "Content and creative businesses, video production companies, animation studios and agencies" },
+  "instructor": { "@type": "Person", "name": "Jason Mitchell", "url": "https://jasonmitchell.co.uk", "jobTitle": "AI Speaker, Trainer & Claude Cowork Consultant" },
+  "offers": { "@type": "Offer", "category": "Paid", "price": "1249", "priceCurrency": "GBP", "url": "https://jasonmitchell.co.uk/cowork-course", "availability": "https://schema.org/LimitedAvailability" },
+  "hasCourseInstance": [
+    { "@type": "CourseInstance", "name": "Mondays 2:00pm UK", "courseMode": "online", "courseWorkload": "PT6H", "startDate": "2026-09-07T14:00:00+01:00", "endDate": "2026-09-28T15:30:00+01:00", "location": { "@type": "VirtualLocation", "url": "https://jasonmitchell.co.uk/cowork-course" }, "instructor": { "@type": "Person", "name": "Jason Mitchell" }, "offers": { "@type": "Offer", "price": "1249", "priceCurrency": "GBP" } },
+    { "@type": "CourseInstance", "name": "Mondays 4:00pm UK", "courseMode": "online", "courseWorkload": "PT6H", "startDate": "2026-09-07T16:00:00+01:00", "endDate": "2026-09-28T17:30:00+01:00", "location": { "@type": "VirtualLocation", "url": "https://jasonmitchell.co.uk/cowork-course" }, "instructor": { "@type": "Person", "name": "Jason Mitchell" }, "offers": { "@type": "Offer", "price": "1249", "priceCurrency": "GBP" } },
+    { "@type": "CourseInstance", "name": "Wednesdays 3:00pm UK", "courseMode": "online", "courseWorkload": "PT6H", "startDate": "2026-09-02T15:00:00+01:00", "endDate": "2026-09-23T16:30:00+01:00", "location": { "@type": "VirtualLocation", "url": "https://jasonmitchell.co.uk/cowork-course" }, "instructor": { "@type": "Person", "name": "Jason Mitchell" }, "offers": { "@type": "Offer", "price": "1249", "priceCurrency": "GBP" } },
+    { "@type": "CourseInstance", "name": "Wednesdays 5:00pm UK", "courseMode": "online", "courseWorkload": "PT6H", "startDate": "2026-09-02T17:00:00+01:00", "endDate": "2026-09-23T18:30:00+01:00", "location": { "@type": "VirtualLocation", "url": "https://jasonmitchell.co.uk/cowork-course" }, "instructor": { "@type": "Person", "name": "Jason Mitchell" }, "offers": { "@type": "Offer", "price": "1249", "priceCurrency": "GBP" } }
+  ]
+}
+</script>
+<!-- Structured data: FAQ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What is Claude Cowork?", "acceptedAnswer": { "@type": "Answer", "text": "Claude Cowork is a mode of Anthropic's Claude app that can work with your files, use your everyday tools and run tasks on your computer. It behaves less like a chatbot and more like a teammate. This course shows you how to set it up and put it to work in your business." } },
+    { "@type": "Question", "name": "Do I need a Claude subscription for the Cowork course?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. You will need your own Claude account on a plan that includes Cowork. We send a short setup checklist before week one so you arrive ready to build." } },
+    { "@type": "Question", "name": "Is this course right for a creative or video business?", "acceptedAnswer": { "@type": "Answer", "text": "It is built for exactly that. The examples, workflows and skills are drawn from TV, social video, animation, production and agency work. Anyone running a content-led business will get value, but creative and video teams are who it is designed for." } },
+    { "@type": "Question", "name": "What do I need to take part?", "acceptedAnswer": { "@type": "Answer", "text": "A laptop (Mac or Windows), your own Claude account, and the everyday files and tools you would like to automate. No coding or technical background required." } },
+    { "@type": "Question", "name": "Can I pay by invoice instead of card?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Tick your available times and choose Request an invoice, and Jason will send you one. Your place is confirmed once payment is received." } },
+    { "@type": "Question", "name": "What is the refund policy?", "acceptedAnswer": { "@type": "Answer", "text": "Full details are in the course terms and conditions. In short, if a cohort does not reach the minimum of five people you will be offered an alternative cohort or a full refund." } }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Ticker -->
+<div class="ticker" aria-label="Announcement">
+  <div class="ticker-track">
+    <span class="msg"><span class="hl-text">Cohort 2</span> · Claude Cowork · September 2026 · 4 × 90-min live sessions · limited to 10 places <a class="hl" href="#cohorts">CHOOSE YOUR DATES</a></span>
+    <span class="msg" aria-hidden="true"><span class="hl-text">Cohort 2</span> · Claude Cowork · September 2026 · 4 × 90-min live sessions · limited to 10 places <a class="hl" href="#cohorts">CHOOSE YOUR DATES</a></span>
+    <span class="msg" aria-hidden="true"><span class="hl-text">Cohort 2</span> · Claude Cowork · September 2026 · 4 × 90-min live sessions · limited to 10 places <a class="hl" href="#cohorts">CHOOSE YOUR DATES</a></span>
+  </div>
+</div>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="brand">Claude Cowork course<small>with Jason Mitchell</small></div>
+  <a href="#cohorts" class="cta sm cyan">Choose your dates →</a>
+</div>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-inner">
+    <p class="hero-kicker">AI systems for creative and content businesses</p>
+    <h1>Build your own AI workflow for your content business with Claude Cowork</h1>
+    <div class="date-chip">Cohort 2 · Live online · September 2026</div>
+    <p class="lead">A <strong>four-week (4 × 90 minutes)</strong>, hands-on course to set up Claude Cowork from scratch and customise it around the way you actually work, so it saves you hours every week instead of sitting unused. Designed for content and creative businesses across TV, social video, animation and more.</p>
+    <div class="price-box">
+      <div class="amt">£1,249 <span>+ VAT</span></div>
+      <div class="inc">£1,498.80 inc VAT · per person</div>
+      <button class="link-btn" id="intlToggle" aria-expanded="false" aria-controls="intlPrice" style="margin-top:6px;">Show US &amp; EU pricing →</button>
+      <div class="intl" id="intlPrice" hidden>Approx <strong>$1,649</strong> (US) · <strong>€1,449</strong> (EU). Final price confirmed at checkout.</div>
+    </div>
+    <div class="hero-cta">
+      <a href="#cohorts" class="cta bright">Choose your dates →</a>
+      <a href="#curriculum" class="cta outline">See what's covered</a>
+    </div>
+  </div>
+</header>
+
+<!-- THE FOUR WEEKS (now above outcomes) -->
+<section id="curriculum">
+  <div class="section-inner center">
+    <span class="section-label">The course</span>
+    <h2 class="section-title">The four weeks</h2>
+    <p class="section-intro">Four 90-minute live workshops, one a week, each building on the last. Around an hour of guided homework between sessions so the learning sticks.</p>
+    <div class="weeks">
+      <div class="week"><div class="wn">Week 1</div><h3>Workspace &amp; context</h3><p>Set up your workspace and the context files that teach Cowork who you are, how you work and what good looks like.</p></div>
+      <div class="week"><div class="wn">Week 2</div><h3>Custom Skills</h3><p>Turn your repeatable workflows into custom Skills that produce on-brand work on demand.</p></div>
+      <div class="week"><div class="wn">Week 3</div><h3>Connectors &amp; Plugins</h3><p>Connect the tools you already use and extend Cowork with plugins so it works across your stack.</p></div>
+      <div class="week"><div class="wn">Week 4</div><h3>Scheduled &amp; automated</h3><p>Put it on autopilot with scheduled tasks and automations that run without you lifting a finger.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section id="outcomes" class="dark">
+  <div class="section-inner center">
+    <span class="section-label">The payoff</span>
+    <h2 class="section-title">By the end of four weeks you'll have:</h2>
+    <ul class="tick">
+      <li><strong>Cowork configured around your company</strong>, your voice and your files, so its output sounds like you from day one.</li>
+      <li><strong>Your own custom Skills</strong> that automate the repetitive work you do every week.</li>
+      <li><strong>Your key tools connected</strong> (email, calendar, Drive and more) through Connectors and Plugins.</li>
+      <li><strong>Scheduled tasks running</strong> quietly in the background, doing work while you sleep.</li>
+      <li><strong>The confidence to build</strong> new automations yourself, long after the course ends.</li>
+      <li><strong>A recording of every session for catchup</strong>, and access to a network of other participants building in Cowork.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section id="included">
+  <div class="section-inner center">
+    <span class="section-label">What's included</span>
+    <h2 class="section-title">Everything you need to do it for real</h2>
+    <div class="steps" style="margin-top:36px;text-align:left;">
+      <div class="step"><b>Live</b><p>4 × 90-minute workshops, taught live and recorded for catch-up.</p></div>
+      <div class="step"><b>Support</b><p>A weekly office hour for your questions and troubleshooting.</p></div>
+      <div class="step"><b>Guidance</b><p>Written homework guidance each week (about an hour) so it sticks.</p></div>
+      <div class="step"><b>Prompts</b><p>Prompts written specifically for your business in advance of each session.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- COHORT SELECTOR -->
+<section id="cohorts" class="dark">
+  <div class="section-inner center">
+    <span class="section-label">Reserve your place</span>
+    <h2 class="section-title">Choose your cohort</h2>
+
+    <div class="dates-banner">Dates: Mondays or Wednesdays in September</div>
+
+    <div class="tz-toggle">
+      <span class="tz-label">Show session times in:</span>
+      <select id="tzSelect" aria-label="Choose your timezone">
+        <option value="0|UK" selected>UK (BST)</option>
+        <option value="1|CEST">CEST (Europe)</option>
+        <option value="-5|US Eastern">US Eastern</option>
+        <option value="-8|US Pacific">US Pacific</option>
+        <option value="3|GST">GST (Gulf)</option>
+      </select>
+    </div>
+
+    <div class="select-box">
+      <p class="sb-intro">Tick every session time you could make. You'll join one cohort, but telling us all the slots that work for you helps us place you in the right group.</p>
+
+      <label class="slot">
+        <input type="checkbox" class="slot-check" value="Mondays 2:00pm UK (7, 14, 21, 28 Sept)" />
+        <span class="slot-body">
+          <span class="day"><span>Mondays</span> · <span class="slot-time" data-start="840" data-end="930">2:00–3:30pm UK</span></span>
+          <span class="dts">7, 14, 21 &amp; 28 September</span>
+        </span>
+      </label>
+
+      <label class="slot">
+        <input type="checkbox" class="slot-check" value="Mondays 4:00pm UK (7, 14, 21, 28 Sept)" />
+        <span class="slot-body">
+          <span class="day"><span>Mondays</span> · <span class="slot-time" data-start="960" data-end="1050">4:00–5:30pm UK</span></span>
+          <span class="dts">7, 14, 21 &amp; 28 September</span>
+        </span>
+      </label>
+
+      <label class="slot">
+        <input type="checkbox" class="slot-check" value="Wednesdays 3:00pm UK (2, 9, 16, 23 Sept)" />
+        <span class="slot-body">
+          <span class="day"><span>Wednesdays</span> · <span class="slot-time" data-start="900" data-end="990">3:00–4:30pm UK</span></span>
+          <span class="dts">2, 9, 16 &amp; 23 September</span>
+        </span>
+      </label>
+
+      <label class="slot">
+        <input type="checkbox" class="slot-check" value="Wednesdays 5:00pm UK (2, 9, 16, 23 Sept)" />
+        <span class="slot-body">
+          <span class="day"><span>Wednesdays</span> · <span class="slot-time" data-start="1020" data-end="1110">5:00–6:30pm UK</span></span>
+          <span class="dts">2, 9, 16 &amp; 23 September</span>
+        </span>
+      </label>
+
+      <div class="price-line">
+        <div class="pl-amt">£1,249 <span>+ VAT</span></div>
+        <div class="pl-sub">£1,498.80 inc VAT per person · approx $1,649 (US) / €1,449 (EU) · Final price confirmed at checkout</div>
+      </div>
+
+      <div class="select-actions">
+        <button type="button" class="cta bright cta-enrol" id="enrolBtn">
+          <span>Enrol and request an invoice →</span>
+          <small>Your place is only confirmed once payment is received</small>
+        </button>
+      </div>
+
+      <div class="enrol-form" id="enrolForm" hidden>
+        <label class="enrol-label" for="enrolEmail">Your email address</label>
+        <div class="enrol-row">
+          <input type="email" id="enrolEmail" placeholder="you@company.com" autocomplete="email" />
+          <button type="button" class="cta bright" id="enrolSubmit">Submit request →</button>
+        </div>
+        <p class="enrol-hint">This opens an email to Jason with your address and chosen times. He'll reply with an invoice and confirm your cohort. Tick at least one session time above first.</p>
+      </div>
+
+      <div class="select-secondary">
+        <a class="cta ghost" href="https://calendar.app.google/5vdDHPFNopNEw7Lg7" target="_blank" rel="noopener">Book a discovery call →</a>
+        <button type="button" class="link-btn" id="questionsBtn">Got questions before committing? →</button>
+      </div>
+
+      <p class="sb-fine">By enrolling you agree to the course terms. <button type="button" class="link-btn" data-modal="termsModal">Read the terms &amp; conditions →</button></p>
+    </div>
+
+    <p class="cohort-note">Places are limited to a maximum of <strong>10 people</strong> per cohort to keep it hands-on. Need places for a team, or a bulk discount? <a href="mailto:contact@jasonmitchell.co.uk?subject=Claude%20Cowork%20Cohort%202%20-%20team%20enquiry">Email Jason</a>.</p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="section-inner center">
+    <span class="section-label">From Cohort 1</span>
+    <h2 class="section-title">What the first cohort said</h2>
+    <p class="section-intro">Cohort 1 ran in June 2026. Here's what some of them said:</p>
+    <div class="quotes">
+      <div class="quote" style="border-style:solid;"><p>"This was a brilliant course, giving a great grounding in Cowork and the possibilities for individuals and/or businesses. Jason was an engaging trainer and put considerable effort into tailoring it to everyone's needs. It has already genuinely changed the way I work within my own business but also for my clients. If you have the opportunity to sign up for this course I recommend you do so!"</p><span>Viki Carter · Production &amp; Operations Consultant, Pe'ahi Consulting</span></div>
+      <!-- TODO: second Cohort 1 testimonial, Jason to supply before publishing -->
+      <div class="quote"><p>"Second Cohort 1 testimonial to be added before publishing."</p><span>Add name &amp; company once approved</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT THE TRAINER -->
+<section id="trainer">
+  <div class="section-inner center">
+    <span class="section-label">About the trainer</span>
+    <h2 class="section-title">Jason Mitchell</h2>
+    <div class="trainer-card">
+      <div class="trainer-photo">
+        <img src="img/hero-jason.jpg" alt="Jason Mitchell, AI speaker, trainer and Claude Cowork consultant" width="200" height="240" />
+      </div>
+      <div class="trainer-body">
+        <p style="font-size:16.5px;color:var(--text-soft);line-height:1.65;margin-bottom:18px;">Jason Mitchell helps content and creative businesses get real value from AI. He brings <strong style="color:var(--white);font-weight:700;">over 20 years in the creative industries</strong>, having founded <strong style="color:var(--white);font-weight:700;">The Connected Set</strong> (TV and social video production) and <strong style="color:var(--white);font-weight:700;">Spud Gun Studios</strong> (the animation studio behind Mashed, with 5.5 million YouTube subscribers), working with clients including the BBC, NBC and WBD.</p>
+        <p style="font-size:16.5px;color:var(--text-soft);line-height:1.65;margin-bottom:22px;">Today he's one of the industry's go-to voices on AI in creative businesses, having presented at global events including Content London, Content Americas and CMPA Prime Time. He's built AI deeply into his own production workflows, and this course shows you how to do the same.</p>
+        <a class="cta outline" href="index.html">More about Jason &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="dark">
+  <div class="section-inner center">
+    <span class="section-label">FAQ</span>
+    <h2 class="section-title">Questions</h2>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">What is Claude Cowork? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">Claude Cowork is a mode of Anthropic's Claude app that can work with your files, use your everyday tools and run tasks on your computer. It behaves less like a chatbot and more like a teammate. This course shows you how to set it up and put it to work in your business.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Do I need a Claude subscription? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">Yes. You'll need your own Claude account on a plan that includes Cowork. We send a short setup checklist before week one so you arrive ready to build, with everything in place.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Is this course right for a creative or video business? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">It's built for exactly that. The examples, workflows and skills are drawn from TV, social video, animation, production and agency work. Anyone running a content-led business will get value, but creative and video teams are who it's designed for.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">What do I need to take part? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">A laptop (Mac or Windows), your own Claude account, and the everyday files and tools you'd like to automate. No coding or technical background required.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">What if I can't make a session live? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">Every workshop is recorded and shared, so you can catch up in your own time. The weekly office hour is there for anything you want to talk through.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Do I need any technical or coding experience? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">No. The whole point is that Cowork lets you automate work in plain English. If you can describe what you want, you can build it.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">How much time should I budget? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">Four 90-minute live sessions, plus roughly one hour of guided homework a week. Around 10 hours over the month.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">Can I pay by invoice instead of card? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">Yes. Tick your available times and use "Request an invoice" and Jason will send you one. Your place is confirmed once payment is received.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">How do you decide which cohort I'm in? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">You tick every slot you could make, and we place you in one cohort based on your availability and where there are places. The more options you tick, the easier it is to get you your preferred group.</div></div>
+    <div class="faq-item"><button class="faq-q" aria-expanded="false">What's your refund policy? <span class="faq-toggle" aria-hidden="true">+</span></button><div class="faq-a">Full details are in the <button type="button" class="link-btn" data-modal="termsModal">terms &amp; conditions</button>. In short: cancel 14 or more days before your cohort's first session for a 50% refund; within 14 days of the first session, no refund. You can transfer your place to a colleague. If a cohort doesn't reach the minimum of 5 people, I may cancel it at my discretion and give you a full refund. Your statutory cancellation rights still apply and take precedence where relevant.</div></div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-row">
+    <p>© <span id="year"></span> Jason Mitchell · Claude Cowork course · The Connected Set</p>
+    <p class="footer-links">
+      <button type="button" data-modal="termsModal">Terms &amp; Conditions</button>
+      <a href="mailto:contact@jasonmitchell.co.uk">Contact</a>
+    </p>
+  </div>
+</footer>
+
+<!-- TERMS MODAL -->
+<div class="modal-overlay" id="termsModal" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+  <div class="modal">
+    <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+    <h3 id="terms-title">Course terms &amp; conditions</h3>
+    <p class="modal-sub">Claude Cowork course · Cohort 2, September 2026. Please read these before you enrol. When you pay or accept an invoice, you'll be asked to confirm you've read and agree to them.</p>
+    <div class="terms">
+      <h4>1. The course</h4>
+      <p>The Claude Cowork course is a four-week online training programme delivered by Jason Mitchell (trading through The Connected Set). It comprises four 90-minute live workshops (one per week), a weekly office hour, and written homework guidance. Every live session is recorded and shared with your cohort for catch-up.</p>
+
+      <h4>2. Dates and cohorts</h4>
+      <p>Cohort 2 runs in September 2026. You join one cohort from the following options:</p>
+      <ul>
+        <li>Mondays 2:00–3:30pm UK, 7, 14, 21 &amp; 28 September</li>
+        <li>Mondays 4:00–5:30pm UK, 7, 14, 21 &amp; 28 September</li>
+        <li>Wednesdays 3:00–4:30pm UK, 2, 9, 16 &amp; 23 September</li>
+        <li>Wednesdays 5:00–6:30pm UK, 2, 9, 16 &amp; 23 September</li>
+      </ul>
+      <p>You indicate every slot you can make at signup; your specific cohort is confirmed by us based on your availability and remaining places. We may adjust session timings by small amounts and will give reasonable notice of any change.</p>
+
+      <h4>3. Price and VAT</h4>
+      <p>The course is £1,249 plus VAT (£1,498.80 including VAT at 20%) per person, for one seat. International equivalents are approximately $1,649 (US) and €1,449 (EU); VAT treatment for non-UK buyers is determined at checkout. Prices are in pounds sterling unless stated otherwise.</p>
+
+      <h4>4. Payment and confirming your place</h4>
+      <p>Payment is by invoice. Request an invoice and I'll send you one; your place is confirmed only once payment has been received. Invoices are payable within 14 days and, in any case, before your cohort starts. Places are allocated on a first-paid basis.</p>
+
+      <h4>5. Minimum and maximum numbers</h4>
+      <p>Each cohort is capped at 10 people and aims for a minimum of 5 to run. If fewer than 5 people sign up, I may, at my discretion, cancel the cohort and give you a full refund, or offer you a place in an alternative cohort, at your choice.</p>
+
+      <h4>6. Cancellations, transfers and refunds</h4>
+      <ul>
+        <li>Cancel 14 or more days before your cohort's first session: 50% refund.</li>
+        <li>Cancel within 14 days of the first session: no refund, as your place and materials are committed.</li>
+        <li>You may transfer your place to a colleague by giving at least 7 days' notice before the first session, subject to availability. Places cannot be moved to a later cohort.</li>
+        <li>Your statutory cancellation rights apply and, where applicable, take precedence over these terms and conditions.</li>
+      </ul>
+
+      <h4>7. Recordings and materials</h4>
+      <p>Session recordings, written guidance and any templates are provided for your own personal or internal business use. Please don't share, resell or publish them outside your organisation.</p>
+
+      <h4>8. The group and conduct</h4>
+      <p>The cohort and participant network exist for learning and mutual support. We ask everyone to be respectful and constructive. We reserve the right to remove anyone behaving abusively, without refund.</p>
+
+      <h4>9. Intellectual property</h4>
+      <p>Course content and materials remain the intellectual property of Jason Mitchell and The Connected Set. Anything you build during or after the course, using your own accounts and data, is yours.</p>
+
+      <h4>10. Your data and privacy</h4>
+      <p>We collect your name, contact details and availability solely to run the course and communicate with you about it. We do not sell your data. It is processed in line with UK GDPR, and you can ask us to update or delete it at any time.</p>
+
+      <h4>11. Liability</h4>
+      <p>The course is training and education delivered with reasonable skill and care. Results depend on your own participation and how you apply what you learn. To the extent permitted by law, we are not liable for indirect or consequential losses. Nothing in these terms limits any liability that cannot be limited under law.</p>
+
+      <h4>12. Governing law</h4>
+      <p>These terms are governed by the laws of England and Wales.</p>
+
+      <p class="terms-foot">Questions about these terms? Email <a href="mailto:contact@jasonmitchell.co.uk" style="color:var(--cyan)">contact@jasonmitchell.co.uk</a>. Acceptance of these terms is confirmed at the point of payment or when you accept your invoice.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var item = btn.parentElement;
+      var wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i){ i.classList.remove('open'); i.querySelector('.faq-q').setAttribute('aria-expanded','false'); });
+      if(!wasOpen){ item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+    });
+  });
+
+  // US/EU price reveal
+  (function(){
+    var t = document.getElementById('intlToggle'), p = document.getElementById('intlPrice');
+    if(t && p){ t.addEventListener('click', function(){
+      var open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', String(!open));
+      p.hidden = open;
+      t.textContent = open ? 'Show US & EU pricing →' : 'Hide US & EU pricing';
+    });}
+  })();
+
+  // Slot highlight
+  document.querySelectorAll('.slot input').forEach(function(cb){
+    cb.addEventListener('change', function(){ cb.closest('.slot').classList.toggle('checked', cb.checked); });
+  });
+
+  function selectedSlots(){
+    return Array.prototype.slice.call(document.querySelectorAll('.slot-check:checked')).map(function(c){ return c.value; });
+  }
+
+  // Timezone toggle: convert the UK base times to the chosen timezone
+  (function(){
+    var sel = document.getElementById('tzSelect');
+    if(!sel) return;
+    function fmt(mins){
+      mins = ((mins % 1440) + 1440) % 1440;
+      var h = Math.floor(mins / 60), m = mins % 60;
+      var mer = h < 12 ? 'am' : 'pm';
+      var h12 = h % 12; if(h12 === 0) h12 = 12;
+      return { s: h12 + ':' + (m < 10 ? '0' : '') + m, mer: mer };
+    }
+    function range(start, end){
+      var a = fmt(start), b = fmt(end);
+      return a.mer === b.mer ? (a.s + '–' + b.s + b.mer) : (a.s + a.mer + '–' + b.s + b.mer);
+    }
+    function apply(){
+      var parts = sel.value.split('|');
+      var off = parseInt(parts[0], 10), label = parts[1];
+      document.querySelectorAll('.slot-time').forEach(function(el){
+        var s = parseInt(el.getAttribute('data-start'), 10) + off * 60;
+        var e = parseInt(el.getAttribute('data-end'), 10) + off * 60;
+        el.textContent = range(s, e) + ' ' + label;
+      });
+    }
+    sel.addEventListener('change', apply);
+    apply();
+  })();
+
+  // Enrol & request an invoice: reveal the email field, then open a pre-filled email
+  (function(){
+    var enrolBtn = document.getElementById('enrolBtn');
+    var form = document.getElementById('enrolForm');
+    var submit = document.getElementById('enrolSubmit');
+    var emailInput = document.getElementById('enrolEmail');
+    if(enrolBtn && form){
+      enrolBtn.addEventListener('click', function(){
+        if(!selectedSlots().length){ alert('Please tick at least one session time you can make before continuing.'); return; }
+        form.hidden = false;
+        if(emailInput) emailInput.focus();
+      });
+    }
+    if(submit){
+      submit.addEventListener('click', function(){
+        var slots = selectedSlots();
+        if(!slots.length){ alert('Please tick at least one session time you can make before continuing.'); return; }
+        var email = emailInput ? emailInput.value.trim() : '';
+        if(!email || email.indexOf('@') === -1){ alert('Please enter a valid email address.'); if(emailInput) emailInput.focus(); return; }
+        var body = 'Hi Jason,\n\nPlease send me an invoice to enrol on the Claude Cowork course, Cohort 2 (September 2026).\n\nMy email: ' + email + '\n\nTimes I can make:\n- ' + slots.join('\n- ') + '\n\nName:\nCompany:\n';
+        window.location.href = 'mailto:contact@jasonmitchell.co.uk?subject=' + encodeURIComponent('Enrolment & invoice request - Claude Cowork Cohort 2') + '&body=' + encodeURIComponent(body);
+      });
+    }
+  })();
+
+  // Got questions before committing? -> open an email to Jason
+  (function(){
+    var q = document.getElementById('questionsBtn');
+    if(!q) return;
+    q.addEventListener('click', function(){
+      var slots = selectedSlots();
+      var body = 'Hi Jason,\n\nI have a few questions about the Claude Cowork course (Cohort 2, September 2026) before I commit:\n\n\n' + (slots.length ? ('Times that could work for me:\n- ' + slots.join('\n- ') + '\n\n') : '') + 'Name:\nCompany:\n';
+      window.location.href = 'mailto:contact@jasonmitchell.co.uk?subject=' + encodeURIComponent('Question about Claude Cowork Cohort 2') + '&body=' + encodeURIComponent(body);
+    });
+  })();
+
+  // Modals
+  (function(){
+    var lastFocus = null;
+    function open(id){ var m = document.getElementById(id); if(!m) return; lastFocus = document.activeElement; m.classList.add('open'); document.body.style.overflow='hidden'; var c = m.querySelector('[data-close]'); if(c) c.focus(); }
+    function close(m){ m.classList.remove('open'); document.body.style.overflow=''; if(lastFocus) lastFocus.focus(); }
+    document.querySelectorAll('[data-modal]').forEach(function(btn){ btn.addEventListener('click', function(){ open(btn.getAttribute('data-modal')); }); });
+    document.querySelectorAll('.modal-overlay').forEach(function(m){
+      m.addEventListener('click', function(e){ if(e.target === m) close(m); });
+      var c = m.querySelector('[data-close]'); if(c) c.addEventListener('click', function(){ close(m); });
+    });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ var o = document.querySelector('.modal-overlay.open'); if(o) close(o); } });
+  })();
+</script>
+
+</body>
+</html>
