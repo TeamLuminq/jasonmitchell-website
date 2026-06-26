@@ -34,7 +34,7 @@
   "jobTitle": "AI Speaker, Trainer & Claude Cowork Consultant",
   "description": "Helps content and creative businesses get real value from AI through talks, training and a done-for-you Claude Cowork consultancy service. 20 years in TV and video production.",
   "url": "https://jasonmitchell.co.uk",
-  "email": "contact@jasonmitchell.co.uk",
+  "email": "jasonai@theconnectedset.com",
   "image": "https://jasonmitchell.co.uk/img/hero-jason.jpg",
   "sameAs": [
     "https://www.linkedin.com/in/mitchelljason/",
@@ -520,6 +520,9 @@
   .m-build h4 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
   .m-build p { font-size: 14px; color: var(--text-soft); line-height: 1.55; }
   .modal .cta { margin-top: 4px; }
+  .modal.modal-sm { max-width: 520px; }
+  .m-choice { display: flex; flex-direction: column; gap: 12px; margin-top: 6px; }
+  .m-choice .cta { width: 100%; justify-content: center; }
 
   /* Responsive */
   @media (max-width: 1000px) {
@@ -626,7 +629,7 @@
 
       <!-- TILE 1: Keynotes -->
       <article class="tile t-talks" id="talks">
-        <div class="tile-num">01 · Talks &amp; Training</div>
+        <div class="tile-num">01 · Talks &amp; Workshops</div>
         <h3>Keynotes &amp; Workshops: AI Tools &amp; Cowork Sessions</h3>
         <p class="tile-sub">Live, demo-heavy sessions that show your team exactly which AI tools to use and how. In person, hybrid or remote.</p>
 
@@ -652,13 +655,13 @@
 
         <div class="tile-foot">
           <button class="link-btn" type="button" data-modal="testimonialsModal">What people say →</button>
-          <a class="cta bright" href="mailto:contact@jasonmitchell.co.uk?subject=AI%20talk%20or%20training%20enquiry">Enquire or book me →</a>
+          <button class="cta bright" type="button" data-modal="enquireModal">Enquire or book me →</button>
         </div>
       </article>
 
       <!-- TILE 2: Cowork Training -->
       <article class="tile t-cohort" id="cohort">
-        <div class="tile-num">02 · Online Training</div>
+        <div class="tile-num">02 · Claude Cowork Cohort</div>
         <h3>Claude Cowork Training in small groups (individual sign up)</h3>
         <p class="tile-sub">A four-week, hands-on online cohort where we build your Cowork setup together, live. Small groups, real outputs, no jargon.</p>
 
@@ -673,7 +676,7 @@
           <div class="amt">£1,249 <span>+VAT</span></div>
           <small>Per person · September 2026 cohort · 4 x 90-min live sessions, office hours &amp; homework</small>
           <button class="link-btn" type="button" id="intlToggle" aria-expanded="false" aria-controls="intlPrice">Show US &amp; EU pricing →</button>
-          <p class="intl-price" id="intlPrice" hidden>International equivalents: approx <strong>$1,649</strong> (US) · <strong>€1,449</strong> (EU) per person. VAT for non-UK buyers is handled at checkout.</p>
+          <p class="intl-price" id="intlPrice" hidden>International equivalents: approx <strong>$1,649</strong> (US) · <strong>€1,449</strong> (EU) per person.</p>
         </div>
 
         <div class="tile-foot">
@@ -689,6 +692,7 @@
 
         <div class="fmt" style="border-top:none;padding-top:0;">
           <div class="fmt-desc">Most teams are renting a chatbot that starts from zero every session. Instead, I build your team a Cowork setup that learns your business, your voice and your workflows: context files, custom skills, connectors and scheduled tasks. You get a working AI workspace, not a slide deck.</div>
+          <div class="fmt-desc" style="margin-top:12px;">My consultancy specialises in content and creative businesses. From decks to callsheets, scripting to finance, analytics to project management, there's lots that can be automated to free you up for creative tasks.</div>
         </div>
 
         <div class="tile-price">
@@ -697,8 +701,8 @@
         </div>
 
         <div class="tile-foot">
-          <button class="link-btn" type="button" data-modal="processModal">See the full process →</button>
-          <a class="cta bright" href="https://calendar.app.google/5vdDHPFNopNEw7Lg7" target="_blank" rel="noopener">Book a discovery call →</a>
+          <button class="cta ghost" type="button" data-modal="processModal">See the full process →</button>
+          <a class="cta bright" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ03qDJmcJ9kzGXGAnv2gfwHSOd0-BeBjunMCpwjm-fdKpJc-uGTxi7SR8w9xRh-ngvZGZ6F_q5c" target="_blank" rel="noopener">Book a discovery call →</a>
         </div>
       </article>
 
@@ -827,10 +831,8 @@
     <p>Every now and then I send out an email when I've got something genuinely useful for content and creative people. From free training opportunities, to upcoming talks, or general musings at the intersection of AI and content business. If you'd like to keep informed, sign up below.</p>
 
     <div class="news-cta">
-      <a class="cta cyan" href="https://jasonmitchells-newsletter.beehiiv.com/subscribe" target="_blank" rel="noopener">Sign up to the newsletter →</a>
+      <a class="cta cyan" href="https://subscribe-forms.beehiiv.com/0e84ebb1-dff1-44de-869a-998ccd91ecb1" target="_blank" rel="noopener">Sign up to the newsletter →</a>
     </div>
-
-    <p class="news-fine">Opens my sign-up page in a new tab. Occasional updates only. Unsubscribe any time.</p>
   </div>
 </section>
 
@@ -882,7 +884,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What's the fastest way to get in touch? <span class="faq-toggle" aria-hidden="true">+</span></button>
-        <div class="faq-a">Email me at contact@jasonmitchell.co.uk. A short note telling me what you're working on and roughly when you need it is enough for me to come back with a sensible answer. You can also find me on LinkedIn.</div>
+        <div class="faq-a">Email me at jasonai@theconnectedset.com. A short note telling me what you're working on and roughly when you need it is enough for me to come back with a sensible answer. You can also find me on LinkedIn.</div>
       </div>
     </div>
   </div>
@@ -895,7 +897,7 @@
     <h2 id="contact-title">Let's talk.</h2>
     <p>Booking a talk, planning AI training, joining the next Cowork cohort, or want Cowork built for your team? Send me a short note and I'll come back with a sensible answer.</p>
     <div class="contact-methods">
-      <a href="mailto:contact@jasonmitchell.co.uk?subject=AI%20enquiry" class="cta bright">Email me →</a>
+      <button type="button" class="cta bright" data-modal="connectModal">Connect with me</button>
       <a href="https://www.linkedin.com/in/mitchelljason/" class="cta outline" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </div>
@@ -963,6 +965,32 @@
   </div>
 </div>
 
+<!-- Enquire modal (Tile 1) -->
+<div class="modal-overlay" id="enquireModal" role="dialog" aria-modal="true" aria-labelledby="enq-title">
+  <div class="modal modal-sm">
+    <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+    <h3 id="enq-title">Enquire or book me</h3>
+    <p class="modal-sub">Two easy ways to start a conversation about an AI talk or workshop.</p>
+    <div class="m-choice">
+      <a class="cta bright" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ03qDJmcJ9kzGXGAnv2gfwHSOd0-BeBjunMCpwjm-fdKpJc-uGTxi7SR8w9xRh-ngvZGZ6F_q5c" target="_blank" rel="noopener">Book a call to discuss →</a>
+      <a class="cta ghost" href="mailto:jasonai@theconnectedset.com?subject=AI%20Talks%20and%20Workshops%20Enquiry%20from%20website">Email jasonai@theconnectedset.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- Connect modal (Get in touch) -->
+<div class="modal-overlay" id="connectModal" role="dialog" aria-modal="true" aria-labelledby="con-title">
+  <div class="modal modal-sm">
+    <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+    <h3 id="con-title">Connect with me</h3>
+    <p class="modal-sub">Book a quick call, or drop me an email. Whatever's easiest.</p>
+    <div class="m-choice">
+      <a class="cta bright" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ03qDJmcJ9kzGXGAnv2gfwHSOd0-BeBjunMCpwjm-fdKpJc-uGTxi7SR8w9xRh-ngvZGZ6F_q5c" target="_blank" rel="noopener">Book a discovery call →</a>
+      <a class="cta ghost" href="mailto:jasonai@theconnectedset.com?subject=AI%20Enquiry%20from%20website">Email jasonai@theconnectedset.com</a>
+    </div>
+  </div>
+</div>
+
 <!-- Process modal -->
 <div class="modal-overlay" id="processModal" role="dialog" aria-modal="true" aria-labelledby="pm-title">
   <div class="modal">
@@ -978,22 +1006,17 @@
     <div class="m-deliver">
       <h4>What your team gets</h4>
       <ul>
+        <li>Interviews team members to map common workflows</li>
         <li>A full set of company context files in your voice</li>
         <li>A prioritised set of custom skills for your workflows</li>
         <li>Connectors to your key tools, documented</li>
         <li>Any agreed scheduled tasks, set up and verified</li>
         <li>A setup guide deck the team keeps</li>
         <li>A live handover and training session</li>
-        <li>Email support</li>
-        <li>A clear note of anything deferred or handed back</li>
+        <li>Video, phone &amp; email support</li>
       </ul>
     </div>
-    <div class="m-build">
-      <div class="rb">A recent build</div>
-      <h4>Blue Door · London creative consultancy</h4>
-      <p>We mapped 20 workflows and built a prioritised set of files including: over a dozen context files so Claude knows their brand, voice and clients, and over 20 custom Skills training on company data including a proposal writer that turns a brief into a formatted draft deck, case study and session-plan generators, a quality-control system for a key client account, and automated finance and travel admin.</p>
-    </div>
-    <a class="cta bright" href="https://calendar.app.google/5vdDHPFNopNEw7Lg7" target="_blank" rel="noopener">Book a discovery call →</a>
+    <a class="cta bright" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ03qDJmcJ9kzGXGAnv2gfwHSOd0-BeBjunMCpwjm-fdKpJc-uGTxi7SR8w9xRh-ngvZGZ6F_q5c" target="_blank" rel="noopener">Book a discovery call →</a>
   </div>
 </div>
 
