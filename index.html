@@ -20,6 +20,8 @@
 <meta name="twitter:description" content="AI talks, online Cowork training, and done-for-you Claude Cowork builds for content and creative businesses." />
 <meta name="twitter:image" content="img/hero-jason.jpg" />
 <meta name="theme-color" content="#4a1d8e" />
+<link rel="icon" type="image/png" href="img/favicon.png" />
+<link rel="apple-touch-icon" href="img/favicon.png" />
 <link rel="canonical" href="https://jasonmitchell.co.uk" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -92,7 +94,7 @@
       },
       {
         "@type": "Offer",
-        "itemOffered": { "@type": "Service", "name": "Claude Cowork Cohort", "description": "Four-week online small-group training. Four 90-minute live sessions, homework and office hours. Next cohort September 2026." },
+        "itemOffered": { "@type": "Service", "name": "Claude Cowork Cohort", "description": "Four-week online small-group training. Four 90-minute live sessions, homework and office hours. Next cohort October 2026." },
         "priceCurrency": "GBP", "price": "1249"
       },
       {
@@ -124,7 +126,7 @@
     {
       "@type": "Question",
       "name": "What is the Claude Cowork cohort and what does it cost?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A four-week online course that teaches you to set up and run Claude Cowork for your own business: four 90-minute live sessions covering workspace and context, custom skills, connectors and plugins, then scheduled tasks and automation, with homework and office hours. The September 2026 cohort is £1,249 plus VAT (about $1,649 US or €1,449 EU)." }
+      "acceptedAnswer": { "@type": "Answer", "text": "A four-week online course that teaches you to set up and run Claude Cowork for your own business: four 90-minute live sessions covering workspace and context, custom skills, connectors and plugins, then scheduled tasks and automation, with homework and office hours. The October 2026 cohort is £1,249 plus VAT (about $1,649 US or €1,449 EU)." }
     },
     {
       "@type": "Question",
@@ -392,6 +394,10 @@
   .ccard:hover { background: var(--glass-hover); transform: translateY(-3px); }
   .ccard .cc-name { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; margin-bottom: 5px; line-height: 1.15; }
   .ccard .cc-meta { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+  /* Keynote cards: text left, logo right */
+  .kcard { flex-direction: row; align-items: center; justify-content: space-between; gap: 12px; }
+  .kcard-text { display: flex; flex-direction: column; }
+  .cc-logo { width: 50px; height: 50px; object-fit: contain; flex-shrink: 0; }
 
   /* Logo-style grid (background clients) */
   .lgrid { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--glass-border); border-radius: 14px; overflow: hidden; }
@@ -406,6 +412,10 @@
 
   /* Keep the sticky ticker from covering the top row when jumping to a grid */
   #bg-clients, #keynotes-grid { scroll-margin-top: 120px; }
+
+  /* Client logo grid: logo above name */
+  .lgrid .lg { flex-direction: column; gap: 8px; padding: 16px 10px; min-height: 96px; }
+  .lg-logo { width: 50px; height: 50px; object-fit: contain; }
 
   /* Background section */
   .bg { background: var(--dark-overlay); }
@@ -571,9 +581,9 @@
 <!-- Ticker: single message -->
 <div class="ticker" aria-label="Announcement">
   <div class="ticker-track">
-    <span class="msg"><span class="hl-text">NEW</span> Claude Cowork training cohort, Sept 2026: 90-minute sessions weekly x 4 weeks <a class="hl" href="cowork-course.html">SIGN UP NOW</a></span>
-    <span class="msg" aria-hidden="true"><span class="hl-text">NEW</span> Claude Cowork training cohort, Sept 2026: 90-minute sessions weekly x 4 weeks <a class="hl" href="cowork-course.html">SIGN UP NOW</a></span>
-    <span class="msg" aria-hidden="true"><span class="hl-text">NEW</span> Claude Cowork training cohort, Sept 2026: 90-minute sessions weekly x 4 weeks <a class="hl" href="cowork-course.html">SIGN UP NOW</a></span>
+    <span class="msg"><span class="hl-text">NEW</span> Claude Cowork training cohort, Wednesdays in October 2026: 90-minute sessions weekly x 4 weeks <a class="hl" href="cowork-course.html">SIGN UP NOW</a></span>
+    <span class="msg" aria-hidden="true"><span class="hl-text">NEW</span> Claude Cowork training cohort, Wednesdays in October 2026: 90-minute sessions weekly x 4 weeks <a class="hl" href="cowork-course.html">SIGN UP NOW</a></span>
+    <span class="msg" aria-hidden="true"><span class="hl-text">NEW</span> Claude Cowork training cohort, Wednesdays in October 2026: 90-minute sessions weekly x 4 weeks <a class="hl" href="cowork-course.html">SIGN UP NOW</a></span>
   </div>
 </div>
 
@@ -674,7 +684,7 @@
 
         <div class="tile-price">
           <div class="amt">£1,249 <span>+VAT</span></div>
-          <small>Per person · September 2026 cohort · 4 x 90-min live sessions, office hours &amp; homework</small>
+          <small>Per person · Wednesdays in October 2026 · 4 x 90-min live sessions, office hours &amp; homework</small>
           <button class="link-btn" type="button" id="intlToggle" aria-expanded="false" aria-controls="intlPrice">Show US &amp; EU pricing →</button>
           <p class="intl-price" id="intlPrice" hidden>International equivalents: approx <strong>$1,649</strong> (US) · <strong>€1,449</strong> (EU) per person.</p>
         </div>
@@ -738,14 +748,14 @@
     <div class="grid-block" id="keynotes-grid">
       <h3>International keynotes &amp; festivals</h3>
       <div class="cgrid c4 shuffle">
-        <div class="ccard"><div class="cc-name">Content London</div><div class="cc-meta">75 minute keynote</div></div>
-        <div class="ccard"><div class="cc-name">Content Americas</div><div class="cc-meta">75 minute keynote</div></div>
-        <div class="ccard"><div class="cc-name">Content Warsaw</div><div class="cc-meta">75 minute keynote</div></div>
-        <div class="ccard"><div class="cc-name">Content Canada</div><div class="cc-meta">90 minute keynote</div></div>
-        <div class="ccard"><div class="cc-name">KPDA Korea</div><div class="cc-meta">2 hour keynote</div></div>
-        <div class="ccard"><div class="cc-name">CMPA Prime Time Canada</div><div class="cc-meta">75 minute keynote + 45 minute workshop</div></div>
-        <div class="ccard"><div class="cc-name">Belfast Media Festival</div><div class="cc-meta">Panel with demos</div></div>
-        <div class="ccard"><div class="cc-name">NFIS Lagos</div><div class="cc-meta">60 minute keynote</div></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">Content London</div><div class="cc-meta">75 minute keynote</div></div><img class="cc-logo" src="img/Conference%20logos/Content%20London.png" alt="Content London" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">Content Americas</div><div class="cc-meta">75 minute keynote</div></div><img class="cc-logo" src="img/Conference%20logos/Content%20Americas.png" alt="Content Americas" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">Content Warsaw</div><div class="cc-meta">75 minute keynote</div></div><img class="cc-logo" src="img/Conference%20logos/Content%20Warsaw.png" alt="Content Warsaw" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">Content Canada</div><div class="cc-meta">90 minute keynote</div></div><img class="cc-logo" src="img/Conference%20logos/Content%20Canada.png" alt="Content Canada" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">KPDA Korea</div><div class="cc-meta">2 hour keynote</div></div><img class="cc-logo" src="img/Conference%20logos/KPDA%20Seoul.png" alt="KPDA Korea" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">CMPA Prime Time Canada</div><div class="cc-meta">75 minute keynote + 45 minute workshop</div></div><img class="cc-logo" src="img/Conference%20logos/Prime%20Time%20Canada.png" alt="CMPA Prime Time Canada" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">Belfast Media Festival</div><div class="cc-meta">Panel with demos</div></div><img class="cc-logo" src="img/Conference%20logos/Belfast%20Media%20Festival.png" alt="Belfast Media Festival" width="50" height="50" loading="lazy" /></div>
+        <div class="ccard kcard"><div class="kcard-text"><div class="cc-name">NIFS Lagos</div><div class="cc-meta">60 minute keynote</div></div><img class="cc-logo" src="img/Conference%20logos/NIFS%20Lagos.png" alt="NIFS Lagos" width="50" height="50" loading="lazy" /></div>
       </div>
     </div>
   </div>
@@ -765,31 +775,31 @@
         <p class="lead">My AI work comes from 20 years inside content businesses that I founded: The Connected Set and Spud Gun Studios. I understand the pain points in production, so I'm interested in quick wins: what moves the dial, is practically possible and affordable with AI. Less theory, more actually showing what works.</p>
         <p class="bg-clients-intro">Through my businesses I've produced TV, social video and animation for major clients, including:</p>
         <div class="lgrid shuffle" id="bg-clients" aria-label="Clients across The Connected Set and Spud Gun Studios">
-          <div class="lg">BBC</div>
-          <div class="lg">ITV</div>
-          <div class="lg">Channel 4</div>
-          <div class="lg">Channel 5</div>
-          <div class="lg">MTV</div>
-          <div class="lg">NBC</div>
-          <div class="lg">WBD</div>
-          <div class="lg">Hallmark</div>
-          <div class="lg">Facebook</div>
-          <div class="lg">Snapchat</div>
-          <div class="lg">E4</div>
-          <div class="lg">NHS</div>
-          <div class="lg">Levis</div>
-          <div class="lg">The Royal Foundation</div>
-          <div class="lg">Keshet</div>
-          <div class="lg">Spotify</div>
-          <div class="lg">VICE</div>
-          <div class="lg">PlayStation</div>
-          <div class="lg">Canal+</div>
-          <div class="lg">Virgin Media</div>
-          <div class="lg">Beano</div>
-          <div class="lg">Ubisoft</div>
-          <div class="lg">Open University</div>
-          <div class="lg">TV2</div>
-          <div class="lg">Xbox</div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/BBC.png" alt="BBC" width="50" height="50" loading="lazy" /><span>BBC</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/ITV.png" alt="ITV" width="50" height="50" loading="lazy" /><span>ITV</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Channel%204.png" alt="Channel 4" width="50" height="50" loading="lazy" /><span>Channel 4</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Channel%205.png" alt="Channel 5" width="50" height="50" loading="lazy" /><span>Channel 5</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/MTV.png" alt="MTV" width="50" height="50" loading="lazy" /><span>MTV</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/NBC.png" alt="NBC" width="50" height="50" loading="lazy" /><span>NBC</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/WBD.png" alt="WBD" width="50" height="50" loading="lazy" /><span>WBD</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Hallmark.png" alt="Hallmark" width="50" height="50" loading="lazy" /><span>Hallmark</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Meta.png" alt="Facebook" width="50" height="50" loading="lazy" /><span>Facebook</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Snapchat.png" alt="Snapchat" width="50" height="50" loading="lazy" /><span>Snapchat</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/E4.png" alt="E4" width="50" height="50" loading="lazy" /><span>E4</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/NHS.png" alt="NHS" width="50" height="50" loading="lazy" /><span>NHS</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Levis.png" alt="Levis" width="50" height="50" loading="lazy" /><span>Levis</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Royal%20Foundation.png" alt="The Royal Foundation" width="50" height="50" loading="lazy" /><span>The Royal Foundation</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Keshet.png" alt="Keshet" width="50" height="50" loading="lazy" /><span>Keshet</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Spotify.png" alt="Spotify" width="50" height="50" loading="lazy" /><span>Spotify</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/VICE.png" alt="VICE" width="50" height="50" loading="lazy" /><span>VICE</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Playstation.png" alt="PlayStation" width="50" height="50" loading="lazy" /><span>PlayStation</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Canal+.png" alt="Canal+" width="50" height="50" loading="lazy" /><span>Canal+</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Virgin%20Media.png" alt="Virgin Media" width="50" height="50" loading="lazy" /><span>Virgin Media</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Beano.png" alt="Beano" width="50" height="50" loading="lazy" /><span>Beano</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Ubisoft.png" alt="Ubisoft" width="50" height="50" loading="lazy" /><span>Ubisoft</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Open%20University.png" alt="Open University" width="50" height="50" loading="lazy" /><span>Open University</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/TV2.png" alt="TV2" width="50" height="50" loading="lazy" /><span>TV2</span></div>
+          <div class="lg"><img class="lg-logo" src="img/Client%20logos/Xbox.png" alt="Xbox" width="50" height="50" loading="lazy" /><span>Xbox</span></div>
         </div>
         <div class="bg-stats">
           <div class="bg-stat">
@@ -856,7 +866,7 @@
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What is the Claude Cowork cohort and what does it cost? <span class="faq-toggle" aria-hidden="true">+</span></button>
-        <div class="faq-a">A four-week online course that teaches you to set up and run Claude Cowork for your own business. Four 90-minute live sessions covering workspace and context, custom skills, connectors and plugins, then scheduled tasks and automation, with homework and a weekly office hour. The September 2026 cohort is £1,249 plus VAT, roughly $1,649 in the US or €1,449 in the EU. Every session is recorded.</div>
+        <div class="faq-a">A four-week online course that teaches you to set up and run Claude Cowork for your own business. Four 90-minute live sessions covering workspace and context, custom skills, connectors and plugins, then scheduled tasks and automation, with homework and a weekly office hour. The October 2026 cohort is £1,249 plus VAT, roughly $1,649 in the US or €1,449 in the EU. Every session is recorded.</div>
       </div>
       <div class="faq-item">
         <button class="faq-q" aria-expanded="false">What is the Made-For-You consultancy service? <span class="faq-toggle" aria-hidden="true">+</span></button>
@@ -1015,6 +1025,11 @@
         <li>A live handover and training session</li>
         <li>Video, phone &amp; email support</li>
       </ul>
+    </div>
+    <div class="m-build">
+      <div class="rb">A recent build</div>
+      <h4>Blue Door · Global creative consultancy</h4>
+      <p>A strategic and creative accomplice to world-leading brands, academics, NGOs and governments. With multiple projects and workstreams in play, we mapped 20 workflows and built a prioritised set of files including: over a dozen context files so Claude knows their brand, voice and clients, and over 20 custom Skills training on company data including a proposal writer that turns a brief into a formatted draft deck, case study and session-plan generators, a quality-control system for a key client account, and automated finance and travel admin.</p>
     </div>
     <a class="cta bright" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ03qDJmcJ9kzGXGAnv2gfwHSOd0-BeBjunMCpwjm-fdKpJc-uGTxi7SR8w9xRh-ngvZGZ6F_q5c" target="_blank" rel="noopener">Book a discovery call →</a>
   </div>
